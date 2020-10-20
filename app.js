@@ -9,7 +9,7 @@ app.set('view engine', 'ejs');
 //create home route
 
 app.get('/', (req, res) => {
-  res.send('hola mundo')
+  res.render('home')
 })
 
 
