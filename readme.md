@@ -11,10 +11,11 @@ para autenticar usuarios.
 
 - Cuando le damos click a uno de esos botones en un aplicación web, nos registramos en la aplicación e iniciamos sesión dentro de la aplicación utilizando una cuenta de red social
 
-![aouth-login](images/oauth2-login.png)
-
 ## Beneficios
 - Una cosa menos por la que nos tenemos que preocupar.
 - A nivel de usuario, no tienen que llenar un formulario para que se registren en nuestra aplicación.
 - No tienen diferentes cuentas que recordar
 - Identificación centralizada online que puedes usar para registrarte e iniciar sesión en cualquier aplicación
+
+![aouth-login](images/oauth2-login.png)
+
