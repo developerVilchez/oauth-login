@@ -11,7 +11,7 @@ para autenticar usuarios.
 
 - Cuando le damos click a uno de esos botones en un aplicación web, nos registramos en la aplicación e iniciamos sesión dentro de la aplicación utilizando una cuenta de red social
 
-![aouth-login](images/login.png)
+![aouth-login](images/oauth2-login.png)
 
 ## Beneficios
 - Una cosa menos por la que nos tenemos que preocupar.
