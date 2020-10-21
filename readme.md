@@ -23,3 +23,5 @@
 `Secreto de cliente` : xxxxxxxx
 `Uris (para usar con solicitudes de un navegador)` : http://localhost:3000 
 `Uri de redirección autorizada (para utilizarse con las solicitudes de un servidor web) ` : http://localhost:3000/cualquiercosa 
+
+5.- Vamos asegurar las credenciales utilizando un archivo keys el cual lo colocaremos en el archivo gitignore para que no se publique en github. Recuerda que estos valores los adquieres al crear tu proyecto y las credenciales respecticas en `console.developers.google`
