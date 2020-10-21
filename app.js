@@ -4,11 +4,19 @@ const authRouter = require('./routes/oauth-routes');
 const passportSetup = require('./config/passport-setup');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
-//console.log(passportSetup)
-
-
+const cookieSession = require('cookie-session');
+const passport = require('passport');
 //view engine
 app.set('view engine', 'ejs');
+
+app.use(cookieSession({
+  maxAge : 24 * 60 * 60 * 1000,
+  keys : [key.session.cookieKey]
+}));
+
+//initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Connect con mongodb
 const db = keys.mongo.db;
