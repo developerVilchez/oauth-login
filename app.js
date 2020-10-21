@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const authRouter = require('./routes/oauth-routes');
-
+const passportSetup = require('./config/passport-setup');
+console.log(passportSetup)
 
 //view engine
 app.set('view engine', 'ejs');
@@ -11,7 +12,6 @@ app.use('/auth', authRouter)
 
 
 //create home route
-
 app.get('/', (req, res) => {
   res.render('home')
 })

@@ -19,9 +19,30 @@
 3.- Vas a la pantalla de consentimiento ingresas los datos que te pide
 4.- Vas a la pestaña credenciales y generas la estrategia en cómo van a generar un lazo de confianza tu aplicación y el servidor de google. De este paso tendrás
 
-`ID de cliente` : xxxxxxx
-`Secreto de cliente` : xxxxxxxx
-`Uris (para usar con solicitudes de un navegador)` : http://localhost:3000 
-`Uri de redirección autorizada (para utilizarse con las solicitudes de un servidor web) ` : http://localhost:3000/cualquiercosa 
+```md
+- `ID de cliente` : xxxxxxx
 
+- `Secreto de cliente` : xxxxxxxx
+
+- `Uris (para usar con solicitudes de un navegador)` : http://localhost:3000 
+
+- `Uri de redirección autorizada (para utilizarse con las solicitudes de un servidor web) ` : http://localhost:3000/cualquiercosa 
+
+```
 5.- Vamos asegurar las credenciales utilizando un archivo keys el cual lo colocaremos en el archivo gitignore para que no se publique en github. Recuerda que estos valores los adquieres al crear tu proyecto y las credenciales respecticas en `console.developers.google`
+
+
+6.- Vamos a entender el tema de las URI al momento de hablar del estandar abierto para la autenticación OAuth
+
+![uris-oauth](images_readme/uris_oauth_standar.png)
+
+Tienes que definir 2:
+
+a) Para utilizar con solicitud desde un navegador. Es el URI de origin de la aplicación cliente.
+
+b) `Uri de redirección autorizada`, es para utilizar con la solicitud de un servidor web. Esta es la ruta de tu aplicación a la que se dirige al usuario después que se ha autenticado con google, a esta ruta se le agregará el `codigo de autorización`,
+ese código representa, que el usuario autoriza la petición de tu aplicación a google en su nombre.
+
+![uri_redireccion_aouth](images_readme/uri_redireccion_oauth.png)
+
+
