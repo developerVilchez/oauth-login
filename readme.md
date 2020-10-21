@@ -69,3 +69,8 @@ ese código representa, que el usuario autoriza la petición de tu aplicación a
 12.- Proceso para repasar lo que se ha avanzando, asociar el esquema con el código y entender lo que se viene implementando y hacia donde queremos ir.
 
 ![flujo_de_proceso_oauth_passport_mongo](images_readme/oauth_passport_flujo.png)
+
+
+13.- Lo que hicimos en esta rama fue el serializar y deserializar el id de un usuario que está guardada en nuestra base de datos.
+Serializar : información que voy a enviar al navegador a través de una cookie
+deserializar : información que voy a decodificar de la cookie que venga del navegador
