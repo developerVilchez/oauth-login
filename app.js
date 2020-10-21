@@ -2,10 +2,20 @@ const express = require('express');
 const app = express();
 const authRouter = require('./routes/oauth-routes');
 const passportSetup = require('./config/passport-setup');
-console.log(passportSetup)
+const mongoose = require('mongoose');
+const keys = require('./config/keys');
+//console.log(passportSetup)
+
 
 //view engine
 app.set('view engine', 'ejs');
+
+//Connect con mongodb
+const db = keys.mongo.db;
+mongoose.connect(db, {useUnifiedTopology: true, useNewUrlParser: true })
+.then(() => console.log(`Connected to mongo cloud`))
+.catch((err) => console.log(err) )
+
 
 //set up router
 app.use('/auth', authRouter)

@@ -58,4 +58,4 @@ ese código representa, que el usuario autoriza la petición de tu aplicación a
 ![funcion_callback_passport](images_readme/funcion_callback_passport.png)
 
 
-
+8.- Creamos la base de datos en mongo y lo conectamos con nuestra aplicacion
