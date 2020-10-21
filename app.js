@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const authRouter = require('./routes/oauth-routes');
+const profileRouter = require('./routes/profile-routes');
 const passportSetup = require('./config/passport-setup');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
@@ -28,8 +29,8 @@ mongoose.connect(db, {useUnifiedTopology: true, useNewUrlParser: true })
 
 
 //set up router
-app.use('/auth', authRouter)
-
+app.use('/auth', authRouter);
+app.use('/profile', profileRouter);
 
 //create home route
 app.get('/', (req, res) => {
