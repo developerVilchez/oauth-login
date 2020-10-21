@@ -6,13 +6,15 @@ const passport = require('passport');
 
 //Login aouth
 router.get('/login', (req, res) => {
-  res.render('login')
+  res.render('login', {user: req.user})
 })
 
 //auth logout
 router.get('/logout', (req, res ) => {
   //handle with password
-  res.send('logging out')
+  //res.send('logging out')
+  req.logout(); //destruye la cookie ya no estoy auntenticada
+  res.redirect('/');
 })
 
 //auth with google

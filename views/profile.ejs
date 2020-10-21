@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oauth</title>
+  <title>Profile</title>
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -50,19 +50,18 @@
     <ul>
       <% if(user) { %>
         <li><a href="/auth/logout">Logout</a></li>
-      <% } else { %>
-        <li><a href="/auth/login">Login</a></li>
-      <% } %>
+        <% } else { %>
+          <li><a href="/auth/login">Login</a></li>
+          <% } %>  
       <li><a href="/">Homepage</a></li>
-      <li><a href="/profile">Profile</a></li>
     </ul>
   </nav>
   <header>
-    <h1>Net Ninja OAuth Tut's</h1>
-    <h2>Homepage</h2>
+    <h1>Welcome to your profile, <%=user.username %></h1>
   </header>
   <main>
-    <p>El mejor tutorial OAuth del planeta </p>
+    <p>Extra información sobre mi persona</p>
+    <img src="<%= user.imageUser %>" alt="user.username">
   </main>
 </body>
 </html>

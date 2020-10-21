@@ -12,7 +12,8 @@ const authCheck = (req, res, next) => {
 
 router.get('/', authCheck, (req, res) => {
   //res.render('')
-  res.send('Ya iniciaste sesion en nuestra aplicacion este es tu profile ' + req.user.username)
+  //res.send('Ya iniciaste sesion en nuestra aplicacion este es tu profile ' + req.user.username)
+  res.render('profile', {user: req.user});
 })
 
 module.exports = router;
