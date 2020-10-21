@@ -45,6 +45,17 @@ ese código representa, que el usuario autoriza la petición de tu aplicación a
 
 ![uri_redireccion_aouth](images_readme/uri_redireccion_oauth.png)
 
-7.- Prueba que todo funcione `npm run start`
+7.- Prueba que todo funcione `npm run start`. Ahora analizamos el flujo de oauth para la web.
+
+    7.1 damos click en el boton de `inicia sesión con google +`
+    7.2 para que haga algo gestionamos esa ruta en nuestra app de node. Le decimos que nos envíe a la pantalla de autenticación de google
+    7.3 Ingresamos nuestras credenciales o indicamos con que cuenta queremos trabajar
+    7.4 Google utiliza nuestra uti de redirección y nos envvía el código de autorización con el que el usuario nos dice que autoriza el proceso de atorgamiento de token
+    7.5 Pasamos el **middleware de passport** en la ruta de redirección donde google nos agregó el código de autorización. El middleware de passport se encarga de gestionar con google el token y los datos del profile que nos los traerá en su función de callback
+
+![oauth_flujo_web](images_readme/flujo_oauth_web_google.png)
+
+![funcion_callback_passport](images_readme/funcion_callback_passport.png)
+
 
 
