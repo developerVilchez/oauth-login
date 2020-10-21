@@ -61,3 +61,5 @@ ese código representa, que el usuario autoriza la petición de tu aplicación a
 8.- Creamos la base de datos en mongo y lo conectamos con nuestra aplicacion.
 
 9.- Creamos el modelo user con mongoose
+
+10.- Usamos la data del profile que nos provee el middleware `passport` y l guardamos en nuestra base de datos. Aspi mismo se ha cambiado el puerto a 5001
