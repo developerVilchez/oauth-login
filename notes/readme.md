@@ -34,7 +34,7 @@
 
 6.- Vamos a entender el tema de las URI al momento de hablar del estandar abierto para la autenticación OAuth
 
-![uris-oauth](images_readme/uris_oauth_standar.png)
+![uris-oauth](../images_readme/uris_oauth_standar.png)
 
 Tienes que definir 2:
 
@@ -43,7 +43,7 @@ a) Para utilizar con solicitud desde un navegador. Es el URI de origin de la apl
 b) `Uri de redirección autorizada`, es para utilizar con la solicitud de un servidor web. Esta es la ruta de tu aplicación a la que se dirige al usuario después que se ha autenticado con google, a esta ruta se le agregará el `codigo de autorización`,
 ese código representa, que el usuario autoriza la petición de tu aplicación a google en su nombre.
 
-![uri_redireccion_aouth](images_readme/uri_redireccion_oauth.png)
+![uri_redireccion_aouth](../images_readme/uri_redireccion_oauth.png)
 
 7.- Prueba que todo funcione `npm run start`. Ahora analizamos el flujo de oauth para la web.
 
@@ -53,9 +53,9 @@ ese código representa, que el usuario autoriza la petición de tu aplicación a
     7.4 Google utiliza nuestra uti de redirección y nos envvía el código de autorización con el que el usuario nos dice que autoriza el proceso de atorgamiento de token
     7.5 Pasamos el **middleware de passport** en la ruta de redirección donde google nos agregó el código de autorización. El middleware de passport se encarga de gestionar con google el token y los datos del profile que nos los traerá en su función de callback
 
-![oauth_flujo_web](images_readme/flujo_oauth_web_google.png)
+![oauth_flujo_web](../images_readme/flujo_oauth_web_google.png)
 
-![funcion_callback_passport](images_readme/funcion_callback_passport.png)
+![funcion_callback_passport](../images_readme/funcion_callback_passport.png)
 
 
 8.- Creamos la base de datos en mongo y lo conectamos con nuestra aplicacion.
@@ -68,7 +68,7 @@ ese código representa, que el usuario autoriza la petición de tu aplicación a
 
 12.- Proceso para repasar lo que se ha avanzando, asociar el esquema con el código y entender lo que se viene implementando y hacia donde queremos ir.
 
-![flujo_de_proceso_oauth_passport_mongo](images_readme/oauth_passport_flujo.png)
+![flujo_de_proceso_oauth_passport_mongo](../images_readme/oauth_passport_flujo.png)
 
 
 13.- Lo que hicimos en esta rama fue el serializar y deserializar el id de un usuario que está guardada en nuestra base de datos.
