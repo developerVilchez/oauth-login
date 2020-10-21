@@ -10,15 +10,20 @@ passport.use(
     clientSecret : keys.google.clientSecret,
     callbackURL : '/auth/google/redirect'
   }, (accessToken, refreshToken, profile, done) => {
-    //passport callback function
-    //console.log('passport callback function fired')
-    //console.log(accessToken)
-    //console.log(refreshToken)
-    //console.log(profile)
-    new User({
-      username : profile.displayName,
-      googleId : profile.id
-    }).save().then((newUser) => {
-      console.log(`Nuevi usuario creado ${newUser}` )
+
+    //Verificamos si el usuario existe en la base de datos  
+    User.findOne({ googleId:profile.id })
+      .then((currentUser) => {
+        if(currentUser) {
+         console.log(`El usuario es ${currentUser}`)   
+        }else {
+          // Creamos un nuevo usuario
+        new User({
+          username : profile.displayName,
+          googleId : profile.id
+          }).save().then((newUser) => {
+          console.log(`Nuevo usuario creado ${newUser}` )
+        })
+      }
     })
   }))

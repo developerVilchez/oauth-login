@@ -63,3 +63,5 @@ ese código representa, que el usuario autoriza la petición de tu aplicación a
 9.- Creamos el modelo user con mongoose
 
 10.- Usamos la data del profile que nos provee el middleware `passport` y l guardamos en nuestra base de datos. Aspi mismo se ha cambiado el puerto a 5001
+
+11.- En este proceso vamos a recuperar usuarios, es decir, verificar que si ya existe en la base de datos no se vuelva a crear
