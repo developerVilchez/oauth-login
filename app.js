@@ -9,9 +9,11 @@ const passport = require('passport');
 //view engine
 app.set('view engine', 'ejs');
 
+//Creamos la cookie, va tener duracion de 1 dia , con el key lo vamos a encriptar
+
 app.use(cookieSession({
   maxAge : 24 * 60 * 60 * 1000,
-  keys : [key.session.cookieKey]
+  keys : [keys.session.cookieKey]
 }));
 
 //initialize passport

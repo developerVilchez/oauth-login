@@ -74,3 +74,6 @@ ese código representa, que el usuario autoriza la petición de tu aplicación a
 13.- Lo que hicimos en esta rama fue el serializar y deserializar el id de un usuario que está guardada en nuestra base de datos.
 Serializar : información que voy a enviar al navegador a través de una cookie
 deserializar : información que voy a decodificar de la cookie que venga del navegador
+
+14.- En la sesión galletas creamos la cookie que enviaremos al navegador y que cuando el usuario se logee regresará a nosotros en el objeto request.user
+`npm run start`
