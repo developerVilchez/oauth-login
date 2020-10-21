@@ -65,3 +65,7 @@ ese código representa, que el usuario autoriza la petición de tu aplicación a
 10.- Usamos la data del profile que nos provee el middleware `passport` y l guardamos en nuestra base de datos. Aspi mismo se ha cambiado el puerto a 5001
 
 11.- En este proceso vamos a recuperar usuarios, es decir, verificar que si ya existe en la base de datos no se vuelva a crear
+
+12.- Proceso para repasar lo que se ha avanzando, asociar el esquema con el código y entender lo que se viene implementando y hacia donde queremos ir.
+
+![flujo_de_proceso_oauth_passport_mongo](images_readme/oauth_passport_flujo.png)
