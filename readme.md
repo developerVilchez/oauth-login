@@ -45,4 +45,6 @@ ese código representa, que el usuario autoriza la petición de tu aplicación a
 
 ![uri_redireccion_aouth](images_readme/uri_redireccion_oauth.png)
 
+7.- Prueba que todo funcione `npm run start`
+
 
